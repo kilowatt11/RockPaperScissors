@@ -19,3 +19,6 @@ body {
 .comp {
     text-align: left;
 }
+.choices {
+    border:1px solid black;
+}
