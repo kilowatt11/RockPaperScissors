@@ -39,7 +39,7 @@ function play(x) {
 }
 //resets the Choice to emtpy
 function reset() {
-    debugger
+    
     document.getElementById('compChoice').innerHTML = '';
     document.getElementById('playerChoice').innerHTML = '';
     document.getElementById('playWins').innerHTML = '';
