@@ -1,6 +1,7 @@
 var playWins = 0;
 var compWins = 0;
 function play(x) {
+    reset();
 
 
 
@@ -32,9 +33,17 @@ function play(x) {
 
     document.getElementById('playWins').innerHTML = playWins;
     document.getElementById('compWins').innerHTML = compWins;
-    document.getElementById('compChoice').innerHTML = compChoice;
-    document.getElementById('playerChoice').innerHTML = x;
+    document.getElementById('compChoice').innerHTML = compChoice.toUpperCase();
+    document.getElementById('playerChoice').innerHTML = x.toUpperCase();
 
+}
+//resets the Choice to emtpy
+function reset() {
+    debugger
+    document.getElementById('compChoice').innerHTML = '';
+    document.getElementById('playerChoice').innerHTML = '';
+    document.getElementById('playWins').innerHTML = '';
+    document.getElementById('compWins').innerHTML = '';
 }
 
 
