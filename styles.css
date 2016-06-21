@@ -1,13 +1,11 @@
-.container {
-    /*width:1700px;*/
-}
+
 .hero {
     background-image: url('https://onanimation.files.wordpress.com/2016/03/2016-03-01_08h13_44.jpg?w=1024&h=526');
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
     color:white;
-    height:600px;
+    height:500px;
     margin-bottom:0px;
     margin-top:-40px
 
@@ -28,4 +26,7 @@ body {
 }
 .btn {
     background-color: #A1B9E5;
+}
+.jumbotron h1.title {
+    font-size: 48px;
 }
