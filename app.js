@@ -15,8 +15,10 @@ function play(x) {
     }
 
     if (x == 'rock' && compChoice !== 'paper') {
+        document.getElementById('compChoice').innerHTML = compChoice.toUpperCase();
+        document.getElementById('playerChoice').innerHTML = x.toUpperCase();
         document.getElementById('result').innerHTML = 'Player Wins!';
-        return playWins++;
+         playWins++;
     }
     else if (x == 'paper' && compChoice !== 'scissors') {
         document.getElementById('result').innerHTML = 'Player Wins!';
@@ -39,11 +41,10 @@ function play(x) {
 }
 //resets the Choice to emtpy
 function reset() {
-    
+
+    document.getElementById('result').innerHTML = '';
     document.getElementById('compChoice').innerHTML = '';
     document.getElementById('playerChoice').innerHTML = '';
-    document.getElementById('playWins').innerHTML = '';
-    document.getElementById('compWins').innerHTML = '';
 }
 
 
