@@ -4,21 +4,23 @@ var compWins = 0;
 function play(x) {
     reset();
 
-// SETS THE COMPUTER PICK//
+    // SETS THE COMPUTER PICK//
     var choices = ['rock', 'paper', 'scissors']
     var randI = Math.floor(Math.random() * choices.length)
     var compChoice = choices[randI]
 
-//Game Logic//
+    //Game Logic//
     if (x == compChoice) {
         document.getElementById('result').innerHTML = 'TIE!';
+        document.getElementById('compChoice').innerHTML = compChoice.toUpperCase();
+        document.getElementById('playerChoice').innerHTML = x.toUpperCase();
         return "tie"
     }
     if (x == 'rock' && compChoice !== 'paper') {
         document.getElementById('compChoice').innerHTML = compChoice.toUpperCase();
         document.getElementById('playerChoice').innerHTML = x.toUpperCase();
         document.getElementById('result').innerHTML = 'Player Wins!';
-         playWins++;
+        playWins++;
     }
     else if (x == 'paper' && compChoice !== 'scissors') {
         document.getElementById('result').innerHTML = 'Player Wins!';
@@ -27,7 +29,7 @@ function play(x) {
     else if (x == 'scissors' && compChoice !== 'rock') {
         document.getElementById('result').innerHTML = 'Player Wins!';
         playWins++;
-    }else {
+    } else {
         document.getElementById('result').innerHTML = 'Computer Wins!';
         compWins++;
     }
