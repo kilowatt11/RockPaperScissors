@@ -1,13 +1,13 @@
 var playWins = 0;
 var compWins = 0;
+
 function play(x) {
     reset();
-
-
-
+// SETS THE COMPUTER PICK//
     var choices = ['rock', 'paper', 'scissors']
     var randI = Math.floor(Math.random() * choices.length)
     var compChoice = choices[randI]
+
 
     if (x == compChoice) {
         document.getElementById('result').innerHTML = 'TIE!';
@@ -39,6 +39,7 @@ function play(x) {
     document.getElementById('playerChoice').innerHTML = x.toUpperCase();
 
 }
+
 //resets the Choice to emtpy
 function reset() {
 
