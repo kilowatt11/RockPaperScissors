@@ -49,6 +49,3 @@ function reset() {
     document.getElementById('playerChoice').innerHTML = '';
 }
 
-
-
-
