@@ -1,24 +1,26 @@
 var playWins = 0;
 var compWins = 0;
+
 function play(x) {
     reset();
 
-
-
+    // SETS THE COMPUTER PICK//
     var choices = ['rock', 'paper', 'scissors']
     var randI = Math.floor(Math.random() * choices.length)
     var compChoice = choices[randI]
 
+    //Game Logic//
     if (x == compChoice) {
         document.getElementById('result').innerHTML = 'TIE!';
+        document.getElementById('compChoice').innerHTML = compChoice.toUpperCase();
+        document.getElementById('playerChoice').innerHTML = x.toUpperCase();
         return "tie"
     }
-
     if (x == 'rock' && compChoice !== 'paper') {
         document.getElementById('compChoice').innerHTML = compChoice.toUpperCase();
         document.getElementById('playerChoice').innerHTML = x.toUpperCase();
         document.getElementById('result').innerHTML = 'Player Wins!';
-         playWins++;
+        playWins++;
     }
     else if (x == 'paper' && compChoice !== 'scissors') {
         document.getElementById('result').innerHTML = 'Player Wins!';
@@ -30,7 +32,6 @@ function play(x) {
     } else {
         document.getElementById('result').innerHTML = 'Computer Wins!';
         compWins++;
-
     }
 
     document.getElementById('playWins').innerHTML = playWins;
@@ -39,6 +40,7 @@ function play(x) {
     document.getElementById('playerChoice').innerHTML = x.toUpperCase();
 
 }
+
 //resets the Choice to emtpy
 function reset() {
 
@@ -46,7 +48,4 @@ function reset() {
     document.getElementById('compChoice').innerHTML = '';
     document.getElementById('playerChoice').innerHTML = '';
 }
-
-
-
 
